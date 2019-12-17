@@ -28,11 +28,18 @@ document.querySelector("#genPass").addEventListener('click', function (event){
         charChoices[numChoiceCat] = symbols;
         numChoiceCat++;
     }
+    if (numChoiceCat == 0){
+        alert("Must select at least 1 option!")
+    }
     
     // password length field
     let passLen = document.querySelector("#passLength").value;
     if (!passLen){
         alert("must define a length for your password!");
+    }
+    
+    if ( passLen > 128 ){
+        passLen = 128;
     }
 
     // character selection
