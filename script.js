@@ -4,8 +4,10 @@ let upperCaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
 let numbers = [1,2,3,4,5,6,7,8,9,0];
 let symbols = ["!","@","#","$","%","^","&","*","(",")","~"];
 
+let genButton = document.querySelector("#genPass");
+
 // event listener for button click
-document.querySelector("#genPass").addEventListener('click', function (event){
+genButton.addEventListener('click', function (event){
     // prevent page from reloading
     event.preventDefault();
     
@@ -55,7 +57,7 @@ document.querySelector("#genPass").addEventListener('click', function (event){
     }
 
     // display the resulting password
-    document.querySelector("#resultingPassword").innerHTML = outPass;
+    document.querySelector("#resultingPassword").value = outPass;
 }
 );
 
@@ -63,3 +65,16 @@ document.getElementById("lowercase").checked = true;
 document.getElementById("uppercase").checked = true;
 document.getElementById("numbers").checked = true;
 document.getElementById("symbols").checked = true;
+
+function copyToClip() {
+    let generatedPass = document.querySelector("#resultingPassword")
+    /* Select the text field */
+    generatedPass.select();
+    generatedPass.setSelectionRange(0, 99999); /*For mobile devices*/
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+    /* Alert the copied text */
+    alert("Copied the text: " + generatedPass.value);
+}
