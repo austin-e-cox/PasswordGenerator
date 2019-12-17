@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Instructions
+        Create an application that generates a random password based on user-selected criteria.
+        This app will run in the browser and feature dynamically updated
+        HTML and CSS powered by your JavaScript code. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="baseStyle">
+        <form name="usernamePass">
+
+            <!-- password length -->
+            <div class="form-group">
+                <label for="length">Password length</label>
+                <input class="form-control" id="passLength" type="number" value="8" placeholder="Password length">
+            </div>
+            
+            <!-- checkbox to include lowercase letters -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="lowercase">
+                <label class="form-check-label" for="lowercase">Include lowercase characters</label>
+            </div>
+
+            <!-- checkbox to include uppercase letters -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="uppercase">
+                <label class="form-check-label" for="uppercase">Include uppercase characters</label>
+            </div>
+
+            <!-- checkbox to include numbers -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="numbers">
+                <label class="form-check-label" for="numbers">Include numbers</label>
+            </div>
+
+            <!-- checkbox to include symbols -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="symbols">
+                <label class="form-check-label" for="symbols">Include symbols</label>
+            </div>
+
+            <br>
+
+            <!-- generate the password -->
+            <button type="submit" id="genPass" class="btn btn-primary">Generate</button>
+        </form>
+        <br>
+
+        <!-- Password (updated with JS) -->
+        <p>Resulting password:</p>
+        <div id="resultingPassword"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
