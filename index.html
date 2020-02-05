@@ -18,17 +18,17 @@
 
     <div class="container">
         <!-- All items -->
-        <div class="row ml-auto align-middle">
-            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <div class="row align-middle">
+            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 borderSolid">
                 <!-- Title -->
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 cntr">
                         <h1>Generate a password</h1>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12 justify-content-md-center">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 mw350">
                         
                         <form name="passwordFeatures">
                         
@@ -80,8 +80,8 @@
                     </div>
                 </div>
         
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 mw350">
                         <!-- generate the password -->
                         <button type="submit" id="genPass" class="btn btn-primary">Generate</button>
                     </div>
@@ -92,16 +92,16 @@
                 -->
                 
                 <!-- Password (updated with JS) -->
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 mw350">
                         <p>Resulting password:</p>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-12 mw350">
                         <div class="input-group mb-3">
-                            <input type="text" value="" id="resultingPassword">
+                            <input class="form-control" type="text" value="" id="resultingPassword">
                             <div class="input-group-append" onclick="copyToClip()" id="copyPass">
                                 <span class="input-group-text">Copy</span>
                             </div>

@@ -23,3 +23,15 @@
     max-width: 300px;
     margin:20px;
 }
+
+.borderSolid{
+    border-style: solid;
+}
+
+.cntr{
+    text-align: center;
+}
+
+.mw350{
+    max-width: 350px;
+}
